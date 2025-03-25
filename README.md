@@ -22,7 +22,7 @@
 
 1. 不能使用 `document.cookie` 方式获取 Cookie，因为 ZodGame 部分 Cookie 具有 [HttpOnly](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/Cookies#%E9%99%90%E5%88%B6%E8%AE%BF%E9%97%AE_cookie) 属性。
 
-2. formhash 的获取方式：打开控制台，输入以下代码回车获取。
+2. formhash 的获取方式：登录 ZodGame 网站，F12 打开控制台，输入以下代码回车获取。
 
    ```Javascript
    document.querySelector('[name=formhash]').value
