@@ -33,6 +33,7 @@ function checkIfSuccess(data) {
     console.log("恭喜你签到成功!");
     console.log(data);
   } else {
+    console.log("签到失败！请检查 Cookie 和 Formhash 是否配置正确。");
     throw new Error(data);
   }
 }
