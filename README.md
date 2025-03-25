@@ -27,3 +27,5 @@
    ```Javascript
    document.querySelector('[name=formhash]').value
    ```
+
+3. cookie 与 formhash 一一对应，更新 cookie 时必须同时更新 formhash。
