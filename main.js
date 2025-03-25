@@ -28,12 +28,13 @@ const baseHeaders = {
 function checkIfSuccess(data) {
   if (data.includes("您今日已经签到，请明天再来！")) {
     console.log("您今日已经签到，请明天再来！");
-  } else if (data.includes("签到成功")) {
-    console.log("签到成功");
+    console.log(data);
+  } else if (data.includes("恭喜你签到成功!")) {
+    console.log("恭喜你签到成功!");
+    console.log(data);
   } else {
-    console.log("签到失败");
+    throw new Error(data);
   }
-  console.log(data);
 }
 
 async function checkIn(cookie, formhash) {
