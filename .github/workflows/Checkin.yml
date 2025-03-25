@@ -1,0 +1,28 @@
+name: ZodGame-Auto-Checkin
+
+on:
+  workflow_dispatch:
+  schedule:
+    # UTC+8 ??:??
+    - cron: "40 23 * * *"
+
+jobs:
+  checkin:
+    runs-on: ubuntu-latest
+    environment: ZODGAME
+    env:
+      COOKIE: ${{ secrets.COOKIE }}
+      FORMHASH: ${{ secrets.FORMHASH }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js latest.
+        uses: actions/setup-node@v4
+        with:
+          node-version: latest
+
+      - name: Checkin
+        shell: bash
+        run: |
+          node main.js
