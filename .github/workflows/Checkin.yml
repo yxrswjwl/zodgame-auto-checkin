@@ -3,11 +3,11 @@ name: ZodGame-Auto-Checkin
 on:
   workflow_dispatch:
   schedule:
-    # UTC+8 ??:??
-    - cron: "40 23 * * *"
-
+    # # UTC+8 08:00 +
+    - cron: "0 0 * * *"
 jobs:
   checkin:
+    name: Checkin
     runs-on: ubuntu-latest
     environment: ZODGAME
     env:
