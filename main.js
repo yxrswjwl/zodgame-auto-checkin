@@ -58,7 +58,7 @@ async function main() {
 
   if (process.env.COOKIE && process.env.FORMHASH) {
     cookie = process.env.COOKIE;
-    formhash = process.env.FORM;
+    formhash = process.env.FORMHASH;
   } else {
     console.log("COOKIE AND / OR FORMHASH NOT FOUND.");
     process.exit(1);
