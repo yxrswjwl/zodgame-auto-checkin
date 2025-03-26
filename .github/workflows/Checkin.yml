@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: ZODGAME
     env:
-      COOKIE: ${{ Secrets.COOKIE }}
-      FORMHASH: ${{ Secrets.FORMHASH }}
+      COOKIE: ${{ secrets.COOKIE }}
+      FORMHASH: ${{ secrets.FORMHASH }}
 
     steps:
       - uses: actions/checkout@v4
