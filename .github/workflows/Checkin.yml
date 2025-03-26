@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: ZODGAME
     env:
-      COOKIE: ${{ qhMq_2132_saltkey=r415xUnZ; qhMq_2132_lastvisit=1742956631; qhMq_2132_sid=gjqa11; qhMq_2132_sendmail=1; qhMq_2132_seccodecSgjqa11=9697.4738ddb70d9570afa1; qhMq_2132_seccodecSAmNngjqa11=9704.87ef7fddc436fc2b2d; qhMq_2132_lastact=1742960283%09member.php%09logging; qhMq_2132_ulastactivity=6e809PFCtLQkB0DyzrPkZXtsgk7FbGvw%2BCpInsWLgfRboU2i31R%2F; qhMq_2132_auth=2866czwYL%2FlM1P9XA%2FMTdGZ9Qf%2Ft9u7O2mQKT2DnppN9%2Br%2Btc2oulQCew8gPJM1PylR8mcnt7t0xeqWpN84cHKUGKQo; qhMq_2132_lastcheckfeed=825518%7C1742960283; qhMq_2132_checkfollow=1; qhMq_2132_lip=103.235.17.110%2C1742960128; qhMq_2132_myrepeat_rr=R0 }}
-      FORMHASH: ${{ 0a0245e3 }}
+      COOKIE: ${{ Secrets.COOKIE }}
+      FORMHASH: ${{ Secrets.FORMHASH }}
 
     steps:
       - uses: actions/checkout@v4
