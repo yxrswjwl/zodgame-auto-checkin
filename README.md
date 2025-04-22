@@ -1,8 +1,14 @@
 ## ZodGame 定时自动签到
 
-> 利用 Github Actions 定时任务实现自动签到。随机心情。
+利用 Github Actions 定时任务实现自动签到。随机心情。
 
 [![ZodGame-Auto-Checkin](https://github.com/ewigl/zodgame-auto-checkin/actions/workflows/Checkin.yml/badge.svg)](https://github.com/ewigl/zodgame-auto-checkin/actions/workflows/Checkin.yml)
+
+### 环境变量
+
+- **Environments**: `ZODGAME`
+
+- **Secrets**:`COOKIE`, `FORMHASH`
 
 ### 使用方法
 
@@ -11,12 +17,6 @@
 3. 配置环境变量。
 
 详细文档: https://ewigl.github.io/notes/posts/programming/github-actions/
-
-### 环境变量
-
-- **Environments**: `ZODGAME`
-
-- **Secrets**:`COOKIE`, `FORMHASH`
 
 ### 注意事项
 
@@ -29,3 +29,5 @@
    ```
 
 3. cookie 与 formhash 一一对应，更新 cookie 时必须同时更新 formhash。
+
+4. 根据 [Github 的政策](https://docs.github.com/zh/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/disabling-and-enabling-a-workflow?tool=webui)，当 60 天内未发生仓库活动时，将自动禁用定时 Workflow。需要再次手动启用。
