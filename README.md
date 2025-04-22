@@ -31,3 +31,5 @@
 3. cookie 与 formhash 一一对应，更新 cookie 时必须同时更新 formhash。
 
 4. 根据 [Github 的政策](https://docs.github.com/zh/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/disabling-and-enabling-a-workflow?tool=webui)，当 60 天内未发生仓库活动时，将自动禁用定时 Workflow。需要再次手动启用。
+
+5. 间歇性的 CF 盾可能会导致签到失败，可以尝试在一天之内多设置几次定时任务。
