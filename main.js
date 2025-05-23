@@ -32,8 +32,11 @@ function checkIfSuccess(data) {
   } else if (data.includes("恭喜你签到成功!")) {
     console.log("恭喜你签到成功!");
     console.log(data);
+  } else if (data.includes("520: Web server is returning an unknown error")) {
+    // console.log("CloudFlare 错误，请稍后尝试重试。");
+    throw new Error("CloudFlare 错误，请稍后尝试重试。");
   } else {
-    console.log("签到失败！请检查 Cookie 和 Formhash 是否配置正确。");
+    console.log("签到失败! 未知错误。");
     throw new Error(data);
   }
 }
@@ -62,7 +65,7 @@ async function main() {
     cookie = process.env.COOKIE;
     formhash = process.env.FORMHASH;
   } else {
-    console.log("COOKIE AND / OR FORMHASH NOT FOUND.");
+    console.log("COOKIE 或 FORMHASH 配置错误。请检查环境变量。");
     process.exit(1);
   }
 
